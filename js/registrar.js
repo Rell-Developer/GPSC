@@ -6,6 +6,7 @@ let cerrar = document.querySelector(".close");
 let abrir = document.querySelectorAll(".cta")[0];
 let modal = document.querySelector(".modal");
 let modalC = document.querySelector(".NuevoProyecto-btn");
+let exit = document.querySelector("#exit");
 
 // Booleano para el modal
 let ModalCerrado;
@@ -32,6 +33,13 @@ function eventListeners(){
         if(e.target.classList.value == 'modal-container' && !ModalCerrado){
 
             CerrarModal();
+        }
+
+        // Cerrando Sesion
+        if(e.target == exit){
+            
+            // Llevando al cliente al login
+            window.location = "resources/login.html";
         }
 
         // Recorrida y condicional para las tarjetas del menu
