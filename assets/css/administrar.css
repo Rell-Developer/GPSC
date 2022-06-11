@@ -381,29 +381,41 @@ svg:hover{
     font-size: 17px;
 }
 
-.modal-textos input{
-    width: 25%;
-    /* display: block; */
-    margin: auto;
+.titulo-descripcion{
+    width: 100%;
+}
+
+.datos-principales{
+    width: 50%;
+}
+
+.titulo-input{
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.modal-textos input:not([type="submit"]){
+    width: 20%;
     margin-bottom: 2rem;
+    margin-right: 50px;
     background-color: transparent;
     border: none;
     border-bottom: rgb(22, 22, 22) thin solid;
-    /* text-align: center; */
     outline: none;
     padding: .8rem 0;
     font-size: .9rem;
     color: rgb(22, 22, 22);
+    text-align: center;
 }
 
 .modal-textos div{
-    background: green;
     margin-bottom: 10px;
 
     width: 100%;
 }
 
-.Tutor-Academico div{
+.Tutor-Academico div, .Tutor-Institucional div, .Tutor-Comunitario div, .bachilleres div, .datos-principales div, .comunidad div, .Fecha div{
     display: flex;
     width: 100%;
 
@@ -411,9 +423,15 @@ svg:hover{
 
 }
 
+.comunidad input{
+    width: 15%;
+}
+
 .modal-textos .img-principal{
-    width: 30%;
-    height: 50vh;
+    width: 20%;
+    height: 35vh;
+
+    margin: 10px;
 
     display: flex;
     justify-content: center;
@@ -428,5 +446,27 @@ svg:hover{
     background-size: cover;
     background-attachment: fixed;
     position: relative;
+}
+
+h4{
+    margin: 40px;
+    font-size: 25px;
+}
+
+.btn-registrar{
+
+    padding: 15px;
+
+    background-color: #0670e9;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: .4s;
+    margin-bottom: 70px;
+}
+
+.btn-registrar:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
 /* Fin de registrar proyecto */

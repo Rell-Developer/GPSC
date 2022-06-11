@@ -7,6 +7,7 @@ let abrir = document.querySelectorAll(".cta")[0];
 let modal = document.querySelector(".modal");
 let modalC = document.querySelector(".NuevoProyecto-btn");
 let exit = document.querySelector("#exit");
+let addBach = document.querySelector("#add-bach");
 
 // Booleano para el modal
 let ModalCerrado;
@@ -40,6 +41,11 @@ function eventListeners(){
             
             // Llevando al cliente al login
             window.location = "resources/login.html";
+        }
+
+        if(e.target == addBach){
+            
+            agregarBachiller();
         }
 
         // Recorrida y condicional para las tarjetas del menu
@@ -182,4 +188,25 @@ function OcultarMenu() {
     setTimeout( () => {
         menu.style.display = 'none';
     }, 250);
+}
+
+function agregarBachiller(){
+
+    console.log(addBach.parentElement.classList.value);
+    document.querySelector(".bachilleres").innerHTML += `
+        <br>
+        <div>
+            <label for="bachiller">Bachiller</label>
+            <label for="bachiller-ci">Cedula</label>
+            <label for="bachiller-tlf">Telefono</label>
+        </div>
+
+        <div>   
+            <input type="text" name="bachiller" id="" placeholder="Nombre y Apellido">
+            <input type="text" name="bachiller-ci" id="" placeholder="20000000">
+            <input type="text" name="bachiller-tlf" id="" placeholder="04121234567">
+        </div>
+    `; 
+
+    console.log(addBach.parentElement);
 }
